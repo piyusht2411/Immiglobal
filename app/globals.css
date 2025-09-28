@@ -128,3 +128,10 @@
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
+
+.swiper-pagination-bullet {
+  display: none;
+}
+.swiper-pagination-bullet-active {
+  display: none;
+}

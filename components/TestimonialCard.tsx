@@ -34,7 +34,6 @@ export default function TestimonialCard({
         <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
 
         <CardContent className="p-0">
-          {/* Stars */}
           <div className="flex mb-4">
             {[...Array(5)].map((_, i) => (
               <Star

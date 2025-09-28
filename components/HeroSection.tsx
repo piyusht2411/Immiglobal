@@ -11,6 +11,39 @@ const countries = ["Canada", "Germany", "Australia", "USA", "UK"];
 
 export default function HeroSection() {
   const [currentCountry, setCurrentCountry] = useState(0);
+  const [maxWidth, setMaxWidth] = useState(0);
+
+  useEffect(() => {
+    const calculateMaxWidth = () => {
+      let max = 0;
+      let fontSize = "2.25rem"; // text-4xl
+      if (window.innerWidth >= 1024) {
+        fontSize = "4.5rem"; // lg:text-7xl
+      } else if (window.innerWidth >= 768) {
+        fontSize = "3.75rem"; // md:text-6xl
+      }
+
+      countries.forEach((country) => {
+        const span = document.createElement("span");
+        span.style.fontSize = fontSize;
+        span.style.fontWeight = "700";
+        span.style.position = "absolute";
+        span.style.visibility = "hidden";
+        span.style.whiteSpace = "nowrap";
+        span.textContent = country;
+        document.body.appendChild(span);
+        max = Math.max(max, span.offsetWidth);
+        document.body.removeChild(span);
+      });
+
+      setMaxWidth(max);
+    };
+
+    calculateMaxWidth();
+    window.addEventListener("resize", calculateMaxWidth);
+
+    return () => window.removeEventListener("resize", calculateMaxWidth);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,7 +75,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             Immigrate to{" "}
-            <div className="inline-block min-w-[200px] text-left">
+            <div
+              className="inline-block text-left"
+              style={{ minWidth: maxWidth ? `${maxWidth}px` : "auto" }}
+            >
               <AnimatePresence mode="wait">
                 <motion.span
                   key={countries[currentCountry]}
@@ -77,7 +113,7 @@ export default function HeroSection() {
           >
             <Button
               size="lg"
-              className="text-lg bg-primary hover:bg-primary/90 px-4 py-8"
+              className="text-lg bg-primary hover:bg-primary/90 px-4 py-8 cursor-pointer"
             >
               Get Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -85,7 +121,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg text-white border-[#ffffff00] hover:bg-white/10 backdrop-blur-sm px-4 py-8 bg-transparent"
+              className="text-lg text-white border-[#ffffff00] hover:bg-transparent hover:text-white backdrop-blur-sm px-4 py-8 bg-transparent cursor-pointer"
             >
               <Play className="mr-2 h-5 w-5" />
               Explore Programs

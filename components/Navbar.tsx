@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Logo from "@/public/assets/image/immi-logo1.png";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -43,10 +45,9 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" data-testid="link-home">
             <div className="flex items-center space-x-2">
-              <Globe
+              {/* <Globe
                 className={`h-8 w-8 ${
                   effectiveScrolled ? "text-primary" : "text-white"
                 }`}
@@ -58,6 +59,8 @@ export default function Navbar() {
               >
                 Immiglobal Services
               </span>
+            </div> */}
+              <Image src={Logo} alt="Immiglobal Logo" width={150} height={45} />
             </div>
           </Link>
 

@@ -53,7 +53,7 @@ function StatCounter({ end, duration, label, suffix = "" }: StatCounterProps) {
       transition={{ duration: 0.6 }}
     >
       <div
-        className="text-4xl md:text-5xl font-bold text-primary mb-2"
+        className="text-4xl md:text-5xl font-bold mb-2 text-white"
         data-testid={`stat-${label.toLowerCase().replace(/\s+/g, "-")}`}
       >
         {count.toLocaleString()}

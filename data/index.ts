@@ -18,11 +18,11 @@ import {
   Award,
   Globe,
 } from "lucide-react";
-import Germany from "country-flag-icons/react/3x2/DE"
-import UnitedStates from "country-flag-icons/react/3x2/US"
-import Canada from "country-flag-icons/react/3x2/CA"
-import Australia from "country-flag-icons/react/3x2/AU"
-import UnitedKingdom from "country-flag-icons/react/3x2/GB"
+import Germany from "country-flag-icons/react/3x2/DE";
+import UnitedStates from "country-flag-icons/react/3x2/US";
+import Canada from "country-flag-icons/react/3x2/CA";
+import Australia from "country-flag-icons/react/3x2/AU";
+import UnitedKingdom from "country-flag-icons/react/3x2/GB";
 
 export const countries = [
   { id: "canada", name: "Canada", flag: Germany, image: canadaImg },
@@ -563,24 +563,51 @@ export const services = [
 
 export const testimonialSecond = [
   {
-    name: 'Sarah Johnson',
-    country: 'Canada',
-    service: 'Canada PR',
+    name: "Sarah Johnson",
+    country: "Canada",
+    service: "Canada PR",
     rating: 5,
-    testimonial: 'Immiglobal made my dream of moving to Canada a reality. Their expert guidance through the Express Entry process was invaluable.'
+    testimonial:
+      "Immiglobal made my dream of moving to Canada a reality. Their expert guidance through the Express Entry process was invaluable.",
   },
   {
-    name: 'Michael Chen',
-    country: 'Australia',
-    service: 'Study Abroad', 
+    name: "Michael Chen",
+    country: "Australia",
+    service: "Study Abroad",
     rating: 5,
-    testimonial: 'Outstanding service for my student visa application. They helped me choose the right university and guided me through every step.'
+    testimonial:
+      "Outstanding service for my student visa application. They helped me choose the right university and guided me through every step.",
   },
   {
-    name: 'Priya Sharma',
-    country: 'United Kingdom',
-    service: 'Work Visa',
+    name: "Priya Sharma",
+    country: "United Kingdom",
+    service: "Work Visa",
     rating: 5,
-    testimonial: 'The team at Immiglobal secured my UK work visa efficiently. Their attention to detail gave me confidence throughout the process.'
-  }
+    testimonial:
+      "The team at Immiglobal secured my UK work visa efficiently. Their attention to detail gave me confidence throughout the process.",
+  },
+  {
+    name: "Sarah Johnson",
+    country: "Canada",
+    service: "Canada PR",
+    rating: 5,
+    testimonial:
+      "Immiglobal made my dream of moving to Canada a reality. Their expert guidance through the Express Entry process was invaluable.",
+  },
+  {
+    name: "Michael Chen",
+    country: "Australia",
+    service: "Study Abroad",
+    rating: 5,
+    testimonial:
+      "Outstanding service for my student visa application. They helped me choose the right university and guided me through every step.",
+  },
+  {
+    name: "Priya Sharma",
+    country: "United Kingdom",
+    service: "Work Visa",
+    rating: 5,
+    testimonial:
+      "The team at Immiglobal secured my UK work visa efficiently. Their attention to detail gave me confidence throughout the process.",
+  },
 ];
