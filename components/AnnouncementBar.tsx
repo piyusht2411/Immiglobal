@@ -32,7 +32,7 @@ export default function AnnouncementBar(props: Props) {
     <div
       role="region"
       aria-label="Site announcement"
-      className="fixed top-0 z-50 w-full border-b border-destructive/20 bg-red-500 text-destructive-foreground hidden md:block"
+      className="fixed top-0 z-[99] w-full border-b border-destructive/20 bg-red-500 text-destructive-foreground hidden md:block"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-3 py-2 text-sm md:px-4">
         {/* Left group: icon + message */}
