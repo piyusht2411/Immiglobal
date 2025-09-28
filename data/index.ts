@@ -5,6 +5,10 @@ import usaImg from "@/public/assets/image/usa_new_york_city_sk_8eb051af.jpg";
 import ukImg from "@/public/assets/image/uk_london_big_ben_we_480c214e.jpg";
 import testimonialPhotos from "@/public/assets/image/Client_testimonial_photos_f8e7184a.png";
 import teamPhoto from "@/public/assets/image/Immigration_team_photo_50e13447.png";
+import team1 from "@/public/assets/image/team-1.jpg";
+import team2 from "@/public/assets/image/team-2.jpg";
+import team3 from "@/public/assets/image/team-3.jpg";
+import team4 from "@/public/assets/image/team-4.jpg";
 import { Phone, Mail, MessageCircle, Calendar } from "lucide-react";
 import {
   Users,
@@ -49,7 +53,7 @@ export const visaPrograms = {
       isPopular: true,
     },
     {
-      title: "Provincial Nominee Program",
+      title: "Provincial Nominee",
       approvalTime: "12-18 Months",
       keyBenefits: [
         "Provincial Support",
@@ -139,7 +143,7 @@ export const visaPrograms = {
       description: "Independent skilled migration pathway",
     },
     {
-      title: "Employer Nomination Scheme",
+      title: "Employer Nomination",
       approvalTime: "6-10 Months",
       keyBenefits: ["Employer Sponsored", "Job Security", "PR Pathway"],
       rating: 4.7,
@@ -341,12 +345,12 @@ export const testimonials = [
 
 export const teamMembers = [
   {
-    name: "Sarah Johnson",
+    name: "Pooja Rai",
     role: "Senior Immigration Consultant",
     credentials: "RCIC, MBA",
     experience: "10+ years",
     specialties: "Express Entry, PNP Programs",
-    avatar: teamPhoto.src,
+    avatar: team1.src,
   },
   {
     name: "Michael Chen",
@@ -354,7 +358,7 @@ export const teamMembers = [
     credentials: "JD, RCIC",
     experience: "15+ years",
     specialties: "Complex Cases, Appeals",
-    avatar: teamPhoto.src,
+    avatar: team2.src,
   },
   {
     name: "Emily Rodriguez",
@@ -362,15 +366,15 @@ export const teamMembers = [
     credentials: "RCIC",
     experience: "8+ years",
     specialties: "Document Verification, Translation",
-    avatar: teamPhoto.src,
+    avatar: team3.src,
   },
   {
-    name: "David Kumar",
+    name: "David Johnsson",
     role: "Business Immigration Expert",
     credentials: "RCIC, CPA",
     experience: "12+ years",
     specialties: "Investor Programs, Start-up Visas",
-    avatar: teamPhoto.src,
+    avatar: team4.src,
   },
 ];
 
@@ -461,7 +465,7 @@ export const services = [
     icon: Users,
     price: "$1,299",
     features: [
-      "Comprehensive eligibility assessment",
+      "Comprehensive eligibility",
       "Profile optimization strategies",
       "Document preparation guidance",
       "Application submission support",

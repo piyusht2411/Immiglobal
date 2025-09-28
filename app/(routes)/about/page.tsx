@@ -162,7 +162,7 @@ export default function About() {
                 <Card className="text-center hover-elevate">
                   <CardContent className="p-6">
                     <Avatar className="h-24 w-24 mx-auto mb-4">
-                      <AvatarImage src={member.avatar} alt={member.name} />
+                      <AvatarImage src={member.avatar} alt={member.name} className="object-cover" />
                       <AvatarFallback>
                         {member.name
                           .split(" ")

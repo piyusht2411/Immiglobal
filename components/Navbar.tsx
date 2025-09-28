@@ -9,6 +9,10 @@ import { usePathname } from "next/navigation";
 import Logo from "@/public/assets/image/immi-logo1.png";
 import Image from "next/image";
 
+interface Props {
+  isTopbarVisible: boolean;
+}
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
@@ -17,25 +21,28 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function Navbar(props: Props) {
+  const { isTopbarVisible } = props;
+  const [isScrolled, setIsScrolled] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
   const effectiveScrolled = isHome ? isScrolled : true;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed ${
+        !isTopbarVisible ? "md:top-[45px]" : "md:top-0"
+      } left-0 right-0 z-50 transition-all duration-300 top-0 ${
         isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
