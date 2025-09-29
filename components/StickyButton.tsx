@@ -132,7 +132,7 @@ export function StickyButton() {
 
   return (
     <>
-      <div className="hidden md:block">
+      <div className="">
         <div className="fixed z-50 rotate-[-90deg] left-[-55px] top-1/2 -translate-y-1/2 cursor-pointer">
           <Button
             onClick={() => setIsOpen(true)}
@@ -143,14 +143,14 @@ export function StickyButton() {
         </div>
       </div>
 
-      <div className="md:hidden fixed bottom-4 left-4 z-50">
+      {/* <div className="md:hidden fixed bottom-4 left-4 z-50">
         <Button
           onClick={() => setIsOpen(true)}
           className="rounded-full px-6 py-3 shadow-lg"
         >
           Free Assessment
         </Button>
-      </div>
+      </div> */}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-[95vw] md:max-w-fit w-full p-0 overflow-hidden rounded-2xl max-h-[90vh] md:max-h-fit">
