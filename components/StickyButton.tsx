@@ -133,7 +133,7 @@ export function StickyButton() {
   return (
     <>
       <div className="">
-        <div className="fixed z-50 rotate-[-90deg] left-[-55px] top-1/2 -translate-y-1/2 cursor-pointer">
+        <div className="fixed z-50 rotate-[-90deg] left-[-55px] md:top-1/2 top-[22%] -translate-y-1/2 cursor-pointer">
           <Button
             onClick={() => setIsOpen(true)}
             className="shadow-lg cursor-pointer rounded-bl-lg rounded-br-lg"
